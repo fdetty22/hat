@@ -28,3 +28,8 @@ end, {help = "Put on your gloves"})
 TriggerEvent('es:addCommand', 'hood', function(source, args, user)
 	TriggerClientEvent('hood', source, {})
 end, {help = "Open the hood of your car"})
+
+--Puts vest on ped
+TriggerEvent('es:addCommand', 'vest', function(source, args, user)
+	TriggerClientEvent('vest', source, {})
+end, {help = "Put on your vest"})
