@@ -119,6 +119,31 @@ AddEventHandler( 'sung', function()
 	end
 end)
 
+vest = false 
+	RegisterNetEvent('vest')
+AddEventHandler('vest', function()
+	vest = not vest	
+	if (GetEntityModel(GetPlayerPed(-1)) == hwaycop) then
+		if vest then
+			SetPedComponentVariation(GetPlayerPed(-1), 8, 1, 1, 1)
+		else
+			SetPedDefaultComponentVariation(GetPlayerPed(-1))
+		end		
+	elseif (GetEntityModel(GetPlayerPed(-1)) == cop) then
+		if vest then
+			SetPedComponentVariation(GetPlayerPed(-1), 9, 2, 0, 1)
+		else
+			SetPedDefaultComponentVariation(GetPlayerPed(-1))
+		end	
+	elseif (GetEntityModel(GetPlayerPed(-1)) == sheriff) then
+		if vest then
+			SetPedComponentVariation(GetPlayerPed(-1), 9, 2, 0, 1)
+		else
+			SetPedDefaultComponentVariation(GetPlayerPed(-1))
+		end	
+	end
+end)
+
 hood = false
 
   RegisterNetEvent( 'hood' )
